@@ -1,0 +1,27 @@
+week-1-code-challenge
+
+    This folder has 3 files
+       1.A salary Calculator
+       2.A speed Detector
+       3.A Student grade generator
+
+    SALARY CALCULATOR
+
+    In this code it asks you to put the salary that you receive and the benefits.
+    it then calculates then calculates your PAYE, the amount you pay to NHIF and NSSF.
+
+    SPEED DETECTOR
+
+    In this code, it asks you to input the speed of the vehicle. 
+    the program follows these rules 
+    If the speed is less than 70, it prints “Ok”.
+    Otherwise, for every 5 km/s above the speed limit (70),
+    it gives the driver one demerit point and print the total number of demerit points.
+
+     . If the driver gets more than 12 points, the function prints:“License suspended”
+
+
+     STUDENT GRADE GENERATOR
+
+     This program asks the user to input his/her grade.
+     using these ranges(A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.) it calculates and returns your grade
