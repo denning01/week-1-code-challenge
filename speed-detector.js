@@ -12,18 +12,29 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-rl.question("Enter the speed of the car (in km/h): ", function(answer) {
+//these are the requirements given 
+//its defined as const cause they dont change
+//it asks the user to write the speeed in km/h
+//the answer is converted from a string to float so as to carry out mathematical operations
+rl.question("What is the speed of the car: ", function(answer) {
     const speed = parseFloat(answer);
     const speedLimit = 70;
     const pointsPer5km = 5;
     const maxPoints = 12;
 
+//ensures that the speed in is the correct data type
+//if not it returns invalid input
+//else it continues to run
     if (isNaN(speed)) {
-        console.log("Invalid input. Please enter a numeric value.");
+        console.log("You have not entered the values in the correect datatype. Please try again");
     } else if (speed < speedLimit) {
         console.log("Ok");
     } else {
+// it subtracts the speed from the speed limit
+//the floor returns the greatest integer less than or equal to its numeric argument.
+//the output returned is the divided by 5
+//if output is greater than 12(maxPoints) it prints license suspended
+//if not it prints the total points
         const demeritPoints = Math.floor((speed - speedLimit) / pointsPer5km);
         if (demeritPoints > maxPoints) {
             console.log("License suspended");
